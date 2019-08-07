@@ -6,10 +6,12 @@ class nginx::install {
   ensure   => present,
 
   }
-}
 
-service {'nginx':
+  service {'nginx':
   ensure  => running,
   enable  => true,
   require => Package['nginx'],
 }
+}
+
+
